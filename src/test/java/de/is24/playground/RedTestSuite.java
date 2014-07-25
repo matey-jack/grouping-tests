@@ -8,8 +8,9 @@ import org.junit.runners.Suite;
  * Created by CHeeren on 25.07.2014.
  */
 
-    // This class is a test suite which includes all failing tests
-    // of category "RedCat"
+    // This class is a test suite which is actually a copy of "StandardTestSuite" containing
+    // the same test classes.
+    // However, only the failing tests of category "RedCat" will be executed here.
 
     @RunWith(Categories.class)
     @Categories.IncludeCategory(RedCat.class)
