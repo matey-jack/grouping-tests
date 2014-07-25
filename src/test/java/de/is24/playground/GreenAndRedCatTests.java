@@ -9,11 +9,14 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by CHeeren on 25.07.2014.
  */
+
+// This class contains some failing and some successful tests.
+// To separate the bad ones, the categorisation takes place on method level.
 public class GreenAndRedCatTests {
 
     @Before
     public void setUp() throws Exception {
-        System.out.print("This class contains some failing and some successful tests");
+
     }
 
     // Category is assigned to a single method

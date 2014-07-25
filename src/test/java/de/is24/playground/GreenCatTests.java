@@ -8,11 +8,13 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by CHeeren on 25.07.2014.
  */
+
+// This class contains some successful tests
 public class GreenCatTests {
 
     @Before
     public void setUp() throws Exception {
-        System.out.print("This class contains some successful tests");
+
     }
 
     @Test
