@@ -20,19 +20,19 @@ public class RedCatTests {
             }
 
     @Test
-    public void testGreen1() throws Exception {
+    public void testRed1() throws Exception {
 
         assertEquals("This test will succeed", true, false);
     }
 
     @Test
-    public void testGreen2() throws Exception {
+    public void testRed2() throws Exception {
 
         assertEquals("This test will succeed", true, false);
     }
 
     @Test
-    public void testGreen3() throws Exception {
+    public void testRed3() throws Exception {
 
         assertEquals("This test will succeed", true, false);
     }
