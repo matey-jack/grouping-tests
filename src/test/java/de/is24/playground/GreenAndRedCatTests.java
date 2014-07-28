@@ -23,17 +23,16 @@ public class GreenAndRedCatTests {
     @Category(RedCat.class)
     @Test
     public void testRed1() throws Exception {
-        assertEquals("This test will fail", true, false);
+        assertEquals("This test will fail", false, true);
     }
     @Category(RedCat.class)
     @Test
     public void testRed2() throws Exception {
-        assertEquals("This test will fail", true, false);
+        assertEquals("This test will fail", false, true);
     }
     @Category(RedCat.class)
     @Test
-    public void testRed3() throws Exception {
-        assertEquals("This test will fail", true, false);
+    public void testRed3() throws Exception {assertEquals("This test will fail", false, true);
     }
 
     @Test

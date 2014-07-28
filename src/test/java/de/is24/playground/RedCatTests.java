@@ -22,18 +22,18 @@ public class RedCatTests {
     @Test
     public void testRed1() throws Exception {
 
-        assertEquals("This test will fail", true, false);
+        assertEquals("This test will fail", false, true);
     }
 
     @Test
     public void testRed2() throws Exception {
 
-        assertEquals("This test will fail", true, false);
+        assertEquals("This test will fail", false, true);
     }
 
     @Test
     public void testRed3() throws Exception {
 
-        assertEquals("This test will fail", true, false);
+        assertEquals("This test will fail", false, true);
     }
 }
