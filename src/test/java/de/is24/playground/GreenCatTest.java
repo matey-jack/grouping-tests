@@ -10,7 +10,8 @@ import static org.junit.Assert.assertEquals;
  */
 
 // This class contains some successful tests
-public class GreenCatTests {
+// Although it has "Cat" in its name, it actually doesn't contain any categories
+public class GreenCatTest {
 
     @Before
     public void setUp() throws Exception {

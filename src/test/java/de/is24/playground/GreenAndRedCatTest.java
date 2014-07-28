@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 // This class contains some failing and some successful tests.
 // To separate the bad ones, the categorisation takes place on method level.
-public class GreenAndRedCatTests {
+public class GreenAndRedCatTest {
 
     @Before
     public void setUp() throws Exception {

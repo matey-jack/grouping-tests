@@ -15,9 +15,9 @@ import org.junit.runners.Suite;
     @RunWith(Categories.class)
     @Categories.IncludeCategory(RedCat.class)
     @Suite.SuiteClasses({
-            RedCatTests.class,
-            GreenCatTests.class,
-            GreenAndRedCatTests.class
+            RedCatTest.class,
+            GreenCatTest.class,
+            GreenAndRedCatTest.class
     })
 
     public class RedTestSuite {
