@@ -18,7 +18,3 @@ This project aims to try out and showcase several ways of grouping your tests:
 There are some other good ways to separate tests which are out of scope of this trial project:
  - putting some tests into a separate Maven module
  - others that I haven't thought of yet
-
-### Interesting things we learned on the way
-
-Apparently Maven does not execute unit tests in some cases when Surefire plugin is not explicitly configured. But passing -Dtest=SomeTest will actually execute thet test.
