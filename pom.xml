@@ -49,8 +49,13 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <includes>
-                                <include>**/GreenTests.java</include>
+                                <!--Include all test classes with name beginning with "Green" -->
+                                <include>**/Green*.java</include>
                             </includes>
+                            <excludes>
+                                <!--Exclude all test classes containing categories -->
+                                <exclude>**/*Cat*.java</exclude>
+                            </excludes>
                         </configuration>
                     </plugin>
                 </plugins>
