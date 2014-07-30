@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  */
 
 // This class contains some successful tests without any category assignment
-public class GreenTests {
+public class GreenTest {
 
     @Before
     public void setUp() throws Exception {

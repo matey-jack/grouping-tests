@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 
 // Category is assigned to the entire class with all containing tests
 @Category(RedCat.class)
-public class RedCatTests {
+public class RedCatTest {
 
     @Before
     public void setUp() throws Exception {
