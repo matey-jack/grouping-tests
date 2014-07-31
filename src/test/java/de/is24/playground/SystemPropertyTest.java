@@ -5,28 +5,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
 
 /* 
- * System properties can be set via different ways:
- *   - using -D on the command line (usually the Maven command line, since we don't run java directly any more)
- *   - in the "parameters" section of a TeamCity build config
- *   - in the <properties> section of pom.xml 
- *   - surefire/execution/configuration/systemPropertyVariables
- *  
- * Teamcity calls Maven somewhat like so: 
- * java -Dlots.of.properties maven.Launcher goal args
- *  
- * "args" are specified in field "Additional Maven command line parameters" of the Maven "Build Step".
- * "args" can include properties set via -Dprop=val
+ * Background knowledge: 
+ * https://github.com/matey-jack/grouping-tests/wiki/Maven,-TeamCity,-and-passing-system-properties-to-tests
  * 
- * System properties set on the "Parameters" page in TeamCity will be passed on the "java" command line before the 
- * maven.Launcher and are treated somewhat differently than the ones passed after. Both will be interpreted by
- * Maven itself and its plugins (for instance, skipTests, tests, groups, ...), but only the later ones (additional cmd 
- * line params) will be propagated by surefire into the test runner!
+ * You can simulate the way, our TeamCity example config runs this test with the following command line:
+ * MAVEN_OPTS="-Dproptest.tcy.param=t -Dproptest.tcy.param.passthru=t" mvn test -Pproptest -Dproptest.cmd.arg=t
+ * 
+ * See also the "proptest" profile in pom.xml for a complete picture of what's happening here.
  * 
  */
 public class SystemPropertyTest {
@@ -55,7 +44,8 @@ public class SystemPropertyTest {
 
 	@Test
 	public void testEnv() throws Exception {
+		// simple example of accessing Unix environment directly ...
 		// this environment variable should be set everywhere Java tests can run...
-		assertThat(System.getenv("JAVA_HOME"), containsString("jdk"));
+		assertThat(System.getenv("JAVA_HOME"), anyOf(containsString("jdk"), containsString("jvm"), containsString("java")));
 	}
 }
